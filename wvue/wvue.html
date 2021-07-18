@@ -1,0 +1,19 @@
+<div id="app">
+    <p>{{counter}}</p>
+    <p w-text="counter"></p>
+    <p w-html="desc"></p>
+</div>
+
+<script src="./wvue.js"></script>
+<script>
+const app = new WVue({
+    el:'#app',
+    data:{
+        counter:1,
+        desc:'<p>小熊<span style="font-size:18px;color:red;">真棒</span></p>'
+    }
+})
+setInterval(()=>{
+    app.counter++;
+},1000)
+</script>
